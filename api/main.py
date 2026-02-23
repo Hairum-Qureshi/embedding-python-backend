@@ -3,7 +3,7 @@ import httpx
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-app = FastAPI()
+app = FastAPI(root_path="")
 
 # Get a free token from: https://huggingface.co/settings/tokens
 HF_TOKEN = os.getenv("HF_TOKEN")
