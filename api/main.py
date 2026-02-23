@@ -3,7 +3,7 @@ import httpx
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-app = FastAPI(root_path="")
+app = FastAPI()
 
 # Get a free token from: https://huggingface.co/settings/tokens
 HF_TOKEN = os.getenv("HF_TOKEN")
@@ -16,6 +16,10 @@ class TextRequest(BaseModel):
 
 class EmbeddingResponse(BaseModel):
     text: str
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Embedding API for the CIS advisor chat bot!"}
 
 @app.post("/embed")
 async def embed_text(req: TextRequest):
