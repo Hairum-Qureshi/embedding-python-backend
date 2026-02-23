@@ -1,10 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
-from mangum import Mangum
 
 app = FastAPI()
-handler = Mangum(app)  # <-- THIS LINE MAKES IT WORK
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
