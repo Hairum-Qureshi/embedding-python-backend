@@ -88,6 +88,7 @@ pip install fastapi uvicorn httpx pydantic
 Create a Hugging Face access token:
 
 👉 [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+Make sure to check 'Make calls to Inference Providers' under 'Inference'.
 
 Then add it to your `/api/.env` `.env` file:
 
