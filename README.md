@@ -10,7 +10,7 @@ The service was intentionally separated from the Node.js backend due to **perfor
 
 **Design rationale:**
 
-- Embedding generation is **compute- and latency-sensitive**
+- Embedding generation is **compute-and latency-sensitive**
 - Node.js showed slower response times when handling embedding requests
 - Python has better ecosystem maturity for:
   - ML inference
