@@ -78,7 +78,7 @@ cd embedding-service
 ### 2. Install Dependencies
 
 ```bash
-pip install fastapi uvicorn httpx pydantic
+pip install requirements.txt
 ```
 
 ---
